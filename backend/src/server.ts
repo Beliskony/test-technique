@@ -1,6 +1,6 @@
 import connectDB from "./config/database";
 import express from "express";
-import CORS from "cors";
+
 import dotenv from "dotenv";
 import { UserRouter } from "./routes/User.route";
 import { TransactionRouter } from "./routes/Transaction.route";
@@ -11,7 +11,7 @@ dotenv.config();
 const app = express();
 
 app.use(express.json());
-app.use(CORS());
+
 
 //injection
 const userRouter = container.get<UserRouter>(TYPES.UserRouter)
@@ -23,7 +23,7 @@ app.use("/api", userRouter.router)
 app.use("/api", transactionRouter.router)
 
 const startServer = async () => {
-  const PORT = process.env.PORT || 5000;
+  const PORT =process.env.PORT||5000;
   try {
     await connectDB();
     app.listen(PORT, () => {

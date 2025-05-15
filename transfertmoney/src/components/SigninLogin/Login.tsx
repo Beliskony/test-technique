@@ -24,7 +24,7 @@ const Login = () => {
     
   return (
     <section className='flex flex-col justify-center items-center bg-center gap-y-3 gap-x-6 w-full h-full'>
-        <h1 className="text-5xl text-green-700">Connecter-Vous</h1>
+        <h1 className="text-5xl text-green-700">Connectez-Vous</h1>
 
         <div className="flex flex-row gap-x-2">
            <div className="h-10 w-10 border p-2 rounded-full object-center object-contain">

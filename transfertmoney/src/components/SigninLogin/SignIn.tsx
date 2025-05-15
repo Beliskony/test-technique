@@ -14,7 +14,7 @@ const SignIn = () => {
         setError("");
         try {
             
-            const response = await axios.post("http://localhost:5000/api/user/create", { email });
+            const response = await axios.post("http://localhost:3001/api/user/create", { email, nom });
             if (response.status === 200) {
                 navigate("/dashboard");
             }}
@@ -28,7 +28,7 @@ const SignIn = () => {
    
   return (
     <section className='flex flex-col mx-3 justify-center items-center bg-center gap-y-3 w-full h-full'>
-        <h1 className="text-5xl text-green-700">Connecter-Vous</h1>
+        <h1 className="text-5xl text-green-700">Inscrivez-Vous</h1>
 
         <div className="flex flex-row gap-x-2">
            <div className="h-10 w-10 border p-2 rounded-full object-center object-contain">
